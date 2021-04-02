@@ -24,7 +24,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-01 Thu 21:56 -->
+<!-- 2021-04-01 Thu 23:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Project 2: Audio Clipper Thoughts</title>
@@ -252,18 +252,18 @@ features. I'll specify more in section two.
 I should also note that I found an existing program that aims to accomplish my
 goal with this project almost exactly. That project is called <a href="https://github.com/swh/timemachine">timemachine</a>. When
 I tried to use it, it didn't work exactly like I expected. Although I probably
-missed the feature for retroactive recording, I still decided to still go ahead
-with this project.
+missed the feature for retroactive recording, I still decided to go ahead with
+this project.
 </p>
 
-<div id="outline-container-orgb3f267b" class="outline-2">
-<h2 id="orgb3f267b"><span class="section-number-2">1</span> JACK API</h2>
+<div id="outline-container-org17d9c87" class="outline-2">
+<h2 id="org17d9c87"><span class="section-number-2">1</span> JACK API</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Getting started with the JACK API was extremely easy. There is plenty of
-documentation and example code provided. The simple<sub>client.c</sub> example was a
+documentation and example code provided. The simple_client.c example was a
 helpful starting point for this project. While looking at the source for
-timemachine, I also saw some distinct leftovers from simple<sub>client.c</sub> there.
+timemachine, I also saw some distinct leftovers from simple_client.c there.
 </p>
 
 <p>
@@ -272,8 +272,8 @@ From that simple client, I just needed to make the number of ports adjustable.
 </div>
 </div>
 
-<div id="outline-container-org0fd3d47" class="outline-2">
-<h2 id="org0fd3d47"><span class="section-number-2">2</span> Sound Encoding and Container Formats</h2>
+<div id="outline-container-org640e0b3" class="outline-2">
+<h2 id="org640e0b3"><span class="section-number-2">2</span> Sound Encoding and Container Formats</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 It was pretty quick to set up the ring buffers and write the contents from the
@@ -309,8 +309,8 @@ properly anyway.
 </div>
 </div>
 
-<div id="outline-container-org5d4f4ca" class="outline-2">
-<h2 id="org5d4f4ca"><span class="section-number-2">3</span> Signal Handling</h2>
+<div id="outline-container-org203bfaf" class="outline-2">
+<h2 id="org203bfaf"><span class="section-number-2">3</span> Signal Handling</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 We recently completed a project involving signal handling in my Systems 2
@@ -322,8 +322,8 @@ the program will also exit after writing when receiving the signal.
 </div>
 </div>
 
-<div id="outline-container-org8a3533f" class="outline-2">
-<h2 id="org8a3533f"><span class="section-number-2">4</span> Misc</h2>
+<div id="outline-container-org037819b" class="outline-2">
+<h2 id="org037819b"><span class="section-number-2">4</span> Misc</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 I was thinking these midpoint project reviews would make for a good
@@ -360,7 +360,7 @@ I'll be back in another two weeks.
 <div id="postamble" class="status">
 <p class="date">Date: 2021-04-01 20:53</p>
 <p class="author">Author: Tassos Manganaris</p>
-<p class="date">Created: 2021-04-01 Thu 21:56</p>
+<p class="date">Created: 2021-04-01 Thu 23:01</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
