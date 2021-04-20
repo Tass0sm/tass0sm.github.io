@@ -4,11 +4,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Language" content="en" />
 	<meta name="viewport" content="width=device-width" />
-	<meta name="keywords" content="project, JACK, PipeWire, Wayland" />
-	<meta name="description" content="Thoughts about sclip, an Audio Clipping Tool, so far." />
+	<meta name="keywords" content="project, review, JACK, PipeWire, Wayland" />
+	<meta name="description" content="The time for sclip is up. Time to move on." />
 	<meta name="author" content="tassos" />
 	<meta name="generator" content="saait (https://git.codemadness.org/saait/file/README.html)" />
-	<title>Project 2: Midpoint Thoughts - &quot;Tassos&#39; Blog&quot;</title>
+	<title>Project 2: Review - &quot;Tassos&#39; Blog&quot;</title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="print.css" type="text/css" media="print" />
 	<link rel="alternate" href="atom.xml" type="application/atom+xml" title="&quot;Tassos&#39; Blog&quot; Atom Feed" />
@@ -36,8 +36,8 @@
 		<div id="main">
 			<article>
 <header>
-	<h1><a href="">Project 2: Midpoint Thoughts</a></h1>
-	<p><strong>Last modification on </strong> <time datetime="2021-04-19">2021-04-19</time></p>
+	<h1><a href="">Project 2: Review</a></h1>
+	<p><strong>Last modification on </strong> <time datetime="2021-04-01">2021-04-01</time></p>
 </header>
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -45,10 +45,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-01 Thu 23:01 -->
+<!-- 2021-04-19 Mon 23:14 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Project 2: Audio Clipper Thoughts</title>
+<title>Project 2: Review</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Tassos Manganaris" />
 <style type="text/css">
@@ -260,128 +260,109 @@
 </head>
 <body>
 <div id="content">
-<h1 class="title">Project 2: Audio Clipper Thoughts</h1>
+<h1 class="title">Project 2: Review</h1>
 <p>
-This project is going pretty well. It works and my friends and I have actually
-used it already. There might be a few issues with the design, though. I tried to
-go for a very minimal, somewhat <a href="https://suckless.org/">suckless</a> inspired style. Although I still enjoy
-the result, it feels like I've just purposefully left out some desirable
-features. I'll specify more in section two.
+Well I'm 5 days late for this blog post, and I still don't have a great amount
+of time. Fortunately there isn't a whole lot to write for this one.
 </p>
 
 <p>
-I should also note that I found an existing program that aims to accomplish my
-goal with this project almost exactly. That project is called <a href="https://github.com/swh/timemachine">timemachine</a>. When
-I tried to use it, it didn't work exactly like I expected. Although I probably
-missed the feature for retroactive recording, I still decided to go ahead with
-this project.
+I haven't worked much on sclip since the last blog post. The only new thing to
+mention, I think, is the tiny little discord bot I made for interacting with
+sclip from discord.
 </p>
 
-<div id="outline-container-org17d9c87" class="outline-2">
-<h2 id="org17d9c87"><span class="section-number-2">1</span> JACK API</h2>
+<p>
+Disappointingly, my friends and I have not used sclip all that much. I think the
+discord bot interface is simple enough, but there is definitely something to be
+said for bots which are just accessible at all times. If sclip were
+automatically available at any time, I feel that it would be more popular.
+</p>
+
+<p>
+I'll also use this post to discuss the next project.
+</p>
+
+<div id="outline-container-org7fdec7a" class="outline-2">
+<h2 id="org7fdec7a"><span class="section-number-2">1</span> Next Project</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Getting started with the JACK API was extremely easy. There is plenty of
-documentation and example code provided. The simple_client.c example was a
-helpful starting point for this project. While looking at the source for
-timemachine, I also saw some distinct leftovers from simple_client.c there.
+This last Summer I started getting into some of the older computers I used when
+I was younger. I had a lot of fun looking at the files and games I had played in
+my childhood, and I felt especially nostalgic for Otto Matic on the iMac
+G4. I've always liked the idea of modifying games, so I got the idea to try
+reverse engineering Otto Matic, so that I could play with it again. At the time
+I was lacking some important information about linking, assembly, etc. but I at
+least got to the point of playing with the Ghidra decompiler and even mostly
+reverse engineering the special file format the game used for 3D
+models. Although that really wasn't so much reverse engineering, as it was
+finding and a book and some accompanying code by Brian Greenstone about his file
+format. It was still pretty fun though.
 </p>
 
 <p>
-From that simple client, I just needed to make the number of ports adjustable.
+Anyway I now know understand more about the fundamentals that might help with
+reverse engineering, so I'll try this again. But I originally set out to make 12
+useful things, and reverse engineering one game won't really be that useful to
+anyone. So instead I'll try to learn a bit more about reversing in general in
+another way.
+</p>
+
+<p>
+I was frustrated by the interface to Ghidra I was using over the summer. Of
+course, I didn't really understand the program itself, but my real issue was
+with just doing code-related things outside of Emacs. So I'll make a tool for
+reverse engineering in Emacs. That's not a very specific idea though.
+</p>
+
+<p>
+Around the time I was looking at Ghidra I also saw Radare2. It looks like an
+excellent program but I ended up neglecting it due to what I had already
+invested into Ghidra. Radare2, though, is a much simpler and unix-y tool. And as
+a relatively simple tool, it makes sense to extend it just by creating an
+interface to it. So that is my more concrete idea. I will make an Emacs mode for
+interacting with Radare2.
+</p>
+
+<p>
+Magit is an incredible Emacs interface to Git, and the library that magit uses
+for command interaction (transient.el) is available for use. So that's what I'll
+do. I'll make a magit-inspired interface to Radare2 for Emacs.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org640e0b3" class="outline-2">
-<h2 id="org640e0b3"><span class="section-number-2">2</span> Sound Encoding and Container Formats</h2>
+<div id="outline-container-org3ad68dc" class="outline-2">
+<h2 id="org3ad68dc"><span class="section-number-2">2</span> Bonus Project</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-It was pretty quick to set up the ring buffers and write the contents from the
-input ports to their corresponding buffers. However, it took much more time to
-decide on how that data would eventually make it to the disk.
+I have two concerns. That project is probably not realistically doable within
+this next month, and I've been sometimes annoyed with being completely dedicated
+to a single project. It's kind of nice to bounce between a few things. So I'll
+have a backup project.
 </p>
 
 <p>
-I looked at the library used in timemachine, libsndfile, but thought there
-were better alternatives. I didn't find any recommendations for sound
-libraries from suckless.org, but I saw that the tools they recommended
-supported formats like flac and vorbis from xiph.org. Turns out that xiph.org
-has made many really excellent and open sound encoding and container formats.
+I think Canvas is an okay tool for learning management. It's not perfect and can
+be easily misused by some professors, but it's usually alright. Still, it's a very
+slow interface.
 </p>
 
 <p>
-So I tried first to use libflac and liboggz, then libfishsound and liboggz,
-and maybe some other permutations of their library offerings. I couldn't
-exactly figure them out, which was disappointing. However, I came to the
-conclusion that instead of adding that code to my program, I could just use
-the existing code in ffmpeg. That tool already supports encoding from raw
-little-endian 32-bit floating point pcm, so I now just write the raw audio to
-the disk and then use ffmpeg to convert it to any other format imaginable. I
-think this is extremely in-line with suckless thinking, especially because
-their video editor, blind, just deals with raw, uncompressed video.
-</p>
-
-<p>
-This might be a little off putting though. I may end up changing this
-later. It would also be a good idea to learn how to deal with these formats
-properly anyway.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org203bfaf" class="outline-2">
-<h2 id="org203bfaf"><span class="section-number-2">3</span> Signal Handling</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-We recently completed a project involving signal handling in my Systems 2
-course at the Ohio State University. So I looked to that project for
-implementing a method in which sending a signal to the process would write the
-contents of the buffer to the disk. It doesn't completely work though, because
-the program will also exit after writing when receiving the signal.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org037819b" class="outline-2">
-<h2 id="org037819b"><span class="section-number-2">4</span> Misc</h2>
-<div class="outline-text-2" id="text-4">
-<p>
-I was thinking these midpoint project reviews would make for a good
-opportunity to cover the miscellaneous things I read and learned from during
-development.
-</p>
-
-<p>
-Early on, I found the Linux kernel style guide and skimmed a few sections. It
-was mentioned early on that most of the direction was taken from K&amp;R. I was
-surprised I didn't make the choice to follow the example from that book
-already. Seems pretty obvious now. Now I have a clear idea on how to style my
-C code. The style guide also provided some Emacs configuration for making some
-of the formatting automatic, which is nice.
-</p>
-
-<p>
-I also was in the habit of following some of the recent work of the giants
-from Bell Labs this month. I was reminded how eloquent Brian Kerninghan is and
-found his talk on "The Elements of Programming Style". In the introduction, he
-discussed the book and also its basis in "The Elements of Style" by Strunk and
-White. The book seemed familiar. After looking around, I found my Dad had two
-copies of the book. I've already been writing these blog posts to get some
-practice with my speaking and writing, so I'm excited to read this book and
-hopefully get closer to Kerninghan's skill level.
-</p>
-
-<p>
-I'll be back in another two weeks.
+This semester I've been working a lot in Ruby for one of my classes. It's not
+the coolest language but it's pretty fun for small stuff. So I've decided to
+make a little Ruby script for collecting information from Canvas through their
+API. I'm pretty confident that at least this can be done even with finals this
+month. The other project is a little lofty but I can at least learn some
+interesting things from it.
 </p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2021-04-01 20:53</p>
+<p class="date">Date: 2021-04-19 20:52</p>
 <p class="author">Author: Tassos Manganaris</p>
-<p class="date">Created: 2021-04-01 Thu 23:01</p>
+<p class="date">Created: 2021-04-19 Mon 23:14</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
