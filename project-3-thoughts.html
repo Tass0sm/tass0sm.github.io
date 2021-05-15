@@ -1,0 +1,118 @@
+<!DOCTYPE html><head><meta charset="utf-8" /><title>Project 3: Thoughts — Tassos's Blog</title></head><body><h1>Tassos's Blog</h1><h2>Project 3: Thoughts</h2><h3>by Tassos Manganaris — Sat 01 May 2021</h3><div><p>
+  I have to stay on track with these blog posts, but unforuntately that means I
+  have to write today with very little to show for Project 3. However, the school
+  semester has ended and I can get back on track with radare-mode and other
+  projects. So in the meantime, I'll talk about something I've been hoping to get
+  into for a while now: the Guix package manager.
+</p><div id="outline-container-org83a67c4" class="outline-2">
+  <h2 id="org83a67c4"><span class="section-number-2">1</span> Guix</h2>
+  <div id="text-1" class="outline-text-2">
+    <p>
+      I have wanted to get into functional package management since last year, and I
+      think I first tried with NixOS in January. I was immediately let down. The
+      documentation was severly lacking. I tried to go through nix pills and quickly
+      found a change in the example package they were using (graphviz) had
+      completely broken the tutorial (See the issue on GitHub).
+    </p>
+
+    <p>
+      Generally, I'm not sure if functional package management is a good idea. This
+      whole idea of patching ELF files to point to the correct dynamically linked
+      libraries and use a dense weave of symlinked files and directories is highly
+      offputting. At the same time, hundreds of people apparently use these systems
+      and package managers every day as daily drivers, and their testimony indicates
+      they're very pleased with it.
+    </p>
+
+    <p>
+      So now I'm using the Guix package manager on my computer.
+    </p>
+
+
+    <p>
+      now that they have, they
+      appear to have reached linux environment nirvana.
+    </p>
+
+
+
+    <p>
+      After a week I learned the project
+      could not live up to its gigantic claims and
+    </p>
+
+    <p>
+      After being severly dissapointed
+      with the documentation and
+    </p>
+
+    <p>
+      This last Summer I started getting into some of the older computers I used when
+      I was younger. I had a lot of fun looking at the files and games I had played in
+      my childhood, and I felt especially nostalgic for Otto Matic on the iMac
+      G4. I've always liked the idea of modifying games, so I got the idea to try
+      reverse engineering Otto Matic, so that I could play with it again. At the time
+      I was lacking some important information about linking, assembly, etc. but I at
+      least got to the point of playing with the Ghidra decompiler and even mostly
+      reverse engineering the special file format the game used for 3D
+      models. Although that really wasn't so much reverse engineering, as it was
+      finding and a book and some accompanying code by Brian Greenstone about his file
+      format. It was still pretty fun though.
+    </p>
+
+    <p>
+      Anyway I now know understand more about the fundamentals that might help with
+      reverse engineering, so I'll try this again. But I originally set out to make 12
+      useful things, and reverse engineering one game won't really be that useful to
+      anyone. So instead I'll try to learn a bit more about reversing in general in
+      another way.
+    </p>
+
+    <p>
+      I was frustrated by the interface to Ghidra I was using over the summer. Of
+      course, I didn't really understand the program itself, but my real issue was
+      with just doing code-related things outside of Emacs. So I'll make a tool for
+      reverse engineering in Emacs. That's not a very specific idea though.
+    </p>
+
+    <p>
+      Around the time I was looking at Ghidra I also saw Radare2. It looks like an
+      excellent program but I ended up neglecting it due to what I had already
+      invested into Ghidra. Radare2, though, is a much simpler and unix-y tool. And as
+      a relatively simple tool, it makes sense to extend it just by creating an
+      interface to it. So that is my more concrete idea. I will make an Emacs mode for
+      interacting with Radare2.
+    </p>
+
+    <p>
+      Magit is an incredible Emacs interface to Git, and the library that magit uses
+      for command interaction (transient.el) is available for use. So that's what I'll
+      do. I'll make a magit-inspired interface to Radare2 for Emacs.
+    </p>
+  </div>
+</div><div id="outline-container-orgaea3629" class="outline-2">
+  <h2 id="orgaea3629"><span class="section-number-2">2</span> Bonus Project</h2>
+  <div id="text-2" class="outline-text-2">
+    <p>
+      I have two concerns. That project is probably not realistically doable within
+      this next month, and I've been sometimes annoyed with being completely dedicated
+      to a single project. It's kind of nice to bounce between a few things. So I'll
+      have a backup project.
+    </p>
+
+    <p>
+      I think Canvas is an okay tool for learning management. It's not perfect and can
+      be easily misused by some professors, but it's usually alright. Still, it's a very
+      slow interface.
+    </p>
+
+    <p>
+      This semester I've been working a lot in Ruby for one of my classes. It's not
+      the coolest language but it's pretty fun for small stuff. So I've decided to
+      make a little Ruby script for collecting information from Canvas through their
+      API. I'm pretty confident that at least this can be done even with finals this
+      month. The other project is a little lofty but I can at least learn some
+      interesting things from it.
+    </p>
+  </div>
+</div></div></body>
